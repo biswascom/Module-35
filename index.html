@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter Api</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center mb-5 text-yellow-100 bg-green-500 py-3">Search Your Phone to Buy</h1>
+    </header>
+    <main>
+        <!-- Search Box -->
+        <section class="mb-16 mt-10 text-center">
+            <div>
+                <input id="search-field" type="text" placeholder="Please search your phone"
+                    class="input w-full max-w-xs input-secondary" />
+                <button id="btn-search" class="btn btn-primary">Search</button>
+            </div>
+        </section>
+        <!-- Loading section -->
+        <section>
+            <div>
+                <h1 id="loading" class="text-center text-red-500 text-5xl font-bold hidden">Loading...</h1>
+            </div>
+        </section>
+        <!-- Display Container -->
+        <section>
+            <div id="display-container" class="grid grid-cols-3 gap-4">
+
+            </div>
+            <div>
+                <h1 id="no-found" class="mt-10 text-5xl text-center text-yellow-500 font-bold hidden">No Phone Found!
+                    Please enter valid brand name...</h1>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <section>
+            <input type="checkbox" id="my-modal" class="modal-toggle" />
+            <div class="modal">
+                <div id="modal-details" class="modal-box">
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- show more button -->
+        <section class="text-center">
+            <button id="btn-show-more" class="btn btn-primary my-5 hidden">Show More</button>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
